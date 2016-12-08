@@ -1,0 +1,52 @@
+html, body {
+  min-width: 320px;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  &.hidden {
+    overflow: hidden;
+  }
+}
+
+.contFluid {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  @include transition(transform 500ms cubic-bezier(1.000, 0.000, 0.645, 0.650));
+  .container {
+    max-width: 1240px;
+  }
+  //container
+  .row {
+    position: relative;
+    .container {
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 10px;
+      @include clearfix;
+    }
+    //container
+  }
+  //row
+
+  .overlay,
+  .overlayLang {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(78,58,46,0.90);
+    z-index: 999;
+    display: none;
+    overflow: hidden;
+    &.mob {
+      position: absolute;
+    }
+  }
+  //overlay
+}
+//contFluid

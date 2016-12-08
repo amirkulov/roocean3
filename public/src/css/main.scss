@@ -1,0 +1,141 @@
+@import "components/vars";
+@import "components/fonts";
+@import "components/waves";
+@import "components/container";
+@import "header";
+@import "nav";
+
+html,body {
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+
+.contFluid {
+  .cf_main {
+    .container {
+      max-width: 1280px;
+      padding: 0;
+    }
+    //container
+
+    .list_items {
+      article {
+        position: relative;
+        width: 25%;
+        padding: 0 10px;
+        float: left;
+      }
+      //article
+
+      .inner {
+        border-top: 2px solid #2e3192;
+        box-shadow: 0 0 0 1px #ebebeb;
+        margin: 0 0 20px;
+        padding: 0;
+        @include clearfix;
+
+        .topBar {
+          position: relative;
+          .tb_author {
+            position: relative;
+            margin: 0 20px;
+            padding: 10px 0 10px 40px;
+            .ah_logo {
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              border-radius: 50%;
+              width: 30px;
+              height: 30px;
+              margin: auto;
+            }
+            //ah_logo
+
+            .ah_name {
+              @include DINPro-Regular;
+              font-size: 12px;
+              color: #999999;
+              text-transform: uppercase;
+              margin: 0 ;
+            }
+            //ah_name
+
+            .ah_time {
+              @include DINPro-Regular;
+              font-size: 10px;
+              color: #cccccc;
+              margin: 0;
+            }
+            //ah_time
+          }
+          //tb_author
+
+          .icon {
+            @include center(false, true);
+            right: 12px;
+            font-size: 18px;
+            color: #d7d7d7;
+            cursor: pointer;
+          }
+          //icon
+        }
+        //topBar
+
+        .pic {
+          font-size: 0;
+          display: block;
+          .images {
+            position: relative;
+            left: - 1px;
+            width: calc(100% + 2px);
+            height: auto;
+          }
+          //images
+        }
+        //pic
+
+        .info {
+          padding: 15px 25px;
+          .title {
+            @include DINPro-Regular;
+            font-size: 18px;
+            color: #001b29;
+            margin: 0 0 20px;
+            display: block;
+          }
+          //title
+
+          .tags {
+            position: relative;
+            a {
+              @include DINPro-Regular;
+              font-size: 14px;
+              color: #cccccc;
+              margin: 0 5px 0 0;
+              display: inline-block;
+            }
+          }
+          //tags
+        }
+        //info
+
+        .action {
+          border-top: 1px solid #ebebeb;
+          padding: 10px 15px;
+          @include clearfix;
+          .icon {
+            font-size: 25px;
+            color: #d7d7d7;
+            float: right;
+          }
+          //icon
+        }
+        //action
+      }
+      //inner
+    }
+    //list_items
+  }
+  //cf_main
+}
+//contFluid

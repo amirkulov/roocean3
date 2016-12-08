@@ -1,0 +1,20 @@
+.waves_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 440px;
+  z-index: 1;
+  //@include transform(scale(1, -1));
+  .waves {
+
+    @include center(true, false);
+    width: calc(100% + 350px);
+    path {
+      opacity: .4;
+    }
+    path.last {
+      opacity: 1;
+    }
+  }
+}

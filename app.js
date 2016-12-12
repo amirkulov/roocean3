@@ -5,6 +5,15 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+// Подключение к БД
+var mongo = require('mongo');
+var monk = require('monk');
+var db = monk('localhost:27017/roocean');
+
+// ------ МОДЕЛИ ------//
+// Новости
+var news = require('./models/news');
+
 var index = require('./routes/index');
 
 var app = express();
@@ -21,7 +30,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Make our db accessible to our router
+app.use(function(req,res,next){
+    req.db = db;
+    next();
+});
+
 app.use('/', index);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

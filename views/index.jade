@@ -5,103 +5,29 @@ block content
     div.container
       section.list_items
 
-        article
-          div.inner
-            div.topBar
-              div.tb_author
-                img.ah_logo(src="http://programmy-dlya-android.ru/posters/90_0_100_1/uploads/posts/2015-05/1431294786_kingsoft-office.png")
-                div.ah_name Life
-                time.ah_time 15:30 18.10.2016
-              div.icon.icon-action-menu
-            a.pic(href="/")
-              img.images(src="https://okartinkah.ru/img/s-dnem-rozhdeniya-kartinki-more-1501/s-dnem-rozhdeniya-kartinki-more-17.jpg")
-            div.info
-              a.title(href="/") Путин: РФ удалось стабилизировать экономику, но нужно выйти на устойчивый рост
-              div.tags
-                a(href="/") #ЭКОНОМИКА
-                a(href="/") #ПУТИН
-                a(href="/") #НОВОСТИ
-                a(href="/") #РОССИЯ
-            div.action
-              div.icon.icon-hook
+        each news, i in newslist
+          article
+            div.inner
+              div.topBar
+                div.tb_author
+                  if news.picture = ' '
+                    img.ah_logo(src="/images/pl.png")
+                  else
+                    img.ah_logo(src="#{news.picture}")
 
-        article
-          div.inner
-            div.topBar
-              div.tb_author
-                img.ah_logo(src="http://programmy-dlya-android.ru/posters/90_0_100_1/uploads/posts/2015-05/1431294786_kingsoft-office.png")
-                div.ah_name Life
-                time.ah_time 15:30 18.10.2016
-              div.icon.icon-action-menu
-            a.pic(href="/")
-              img.images(src="https://okartinkah.ru/img/s-dnem-rozhdeniya-kartinki-more-1501/s-dnem-rozhdeniya-kartinki-more-17.jpg")
-            div.info
-              a.title(href="/") Путин: РФ удалось стабилизировать экономику, но нужно выйти на устойчивый рост
-              div.tags
-                a(href="/") #ЭКОНОМИКА
-                a(href="/") #ПУТИН
-                a(href="/") #НОВОСТИ
-                a(href="/") #РОССИЯ
-            div.action
-              div.icon.icon-hook
+                  div.ah_name Life
+                  time.ah_time= news.date
+                div.icon.icon-action-menu
+              a.pic(href="/")
 
-        article
-          div.inner
-            div.topBar
-              div.tb_author
-                img.ah_logo(src="http://programmy-dlya-android.ru/posters/90_0_100_1/uploads/posts/2015-05/1431294786_kingsoft-office.png")
-                div.ah_name Life
-                time.ah_time 15:30 18.10.2016
-              div.icon.icon-action-menu
-            a.pic(href="/")
-              img.images(src="https://okartinkah.ru/img/s-dnem-rozhdeniya-kartinki-more-1501/s-dnem-rozhdeniya-kartinki-more-17.jpg")
-            div.info
-              a.title(href="/") Путин: РФ удалось стабилизировать экономику, но нужно выйти на устойчивый рост
-              div.tags
-                a(href="/") #ЭКОНОМИКА
-                a(href="/") #ПУТИН
-                a(href="/") #НОВОСТИ
-                a(href="/") #РОССИЯ
-            div.action
-              div.icon.icon-hook
-
-        article
-          div.inner
-            div.topBar
-              div.tb_author
-                img.ah_logo(src="http://programmy-dlya-android.ru/posters/90_0_100_1/uploads/posts/2015-05/1431294786_kingsoft-office.png")
-                div.ah_name Life
-                time.ah_time 15:30 18.10.2016
-              div.icon.icon-action-menu
-            a.pic(href="/")
-              img.images(src="https://okartinkah.ru/img/s-dnem-rozhdeniya-kartinki-more-1501/s-dnem-rozhdeniya-kartinki-more-17.jpg")
-            div.info
-              a.title(href="/") Путин: РФ удалось стабилизировать экономику, но нужно выйти на устойчивый рост
-              div.tags
-                a(href="/") #ЭКОНОМИКА
-                a(href="/") #ПУТИН
-                a(href="/") #НОВОСТИ
-                a(href="/") #РОССИЯ
-            div.action
-              div.icon.icon-hook
-        article
-          div.inner
-            div.topBar
-              div.tb_author
-                img.ah_logo(src="http://programmy-dlya-android.ru/posters/90_0_100_1/uploads/posts/2015-05/1431294786_kingsoft-office.png")
-                div.ah_name Life
-                time.ah_time 15:30 18.10.2016
-              div.icon.icon-action-menu
-            a.pic(href="/")
-              img.images(src="https://okartinkah.ru/img/s-dnem-rozhdeniya-kartinki-more-1501/s-dnem-rozhdeniya-kartinki-more-17.jpg")
-            div.info
-              a.title(href="/") Путин: РФ удалось стабилизировать экономику, но нужно выйти на устойчивый рост
-              div.tags
-                a(href="/") #ЭКОНОМИКА
-                a(href="/") #ПУТИН
-                a(href="/") #НОВОСТИ
-                a(href="/") #РОССИЯ
-            div.action
-              div.icon.icon-hook
-
-
+                if news.picture = ' '
+                  img.images(src="/images/pl.png")
+                else
+                  img.images(src="#{news.picture}")
+              div.info
+                a.title(href="/")= news.title
+                div.tags
+                  //each listCategory, i in news.categories
+                  a(href="/")= news.categories
+              div.action
+                div.icon.icon-hook

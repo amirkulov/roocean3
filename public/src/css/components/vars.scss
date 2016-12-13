@@ -222,22 +222,23 @@
   }
 }
 
-.btn_brown,
+.btn_green,
 .btn_red {
   @include roboto;
-  font-size: 15px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 47px;
   height: 48px;
   border-radius: 50px;
+  border: 0;
   text-align: center;
-  text-transform: uppercase;
+  //text-transform: uppercase;
   text-decoration: none;
   outline: none;
   display: inline-block;
   cursor: pointer;
   margin: 0;
-  padding: 0 20px;
+  padding: 0 30px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -246,28 +247,22 @@
 }
 //button
 
-.btn_brown {
-  border: 2px solid #e0c2b0;
-  color: #9e4819;
+.btn_green {
+  background-color: #39b54a;
+  color: #ffffff;
   &:hover,
   &:focus,
-  &:active{
-    //background-color: #f7ecdd;
-    //border-color: #fcf7f1;
-    //color: #9e4719;
-    //text-decoration: none;
-
-    background-color: #ffffff;
-    color: #9e4719;
+  &:active {
+    background-color: rgba(57, 181, 74, .9);
     border-color: #fff;
     text-decoration: none;
-    box-shadow: 0 9px 30px -4px rgba(158, 71, 25, 0.70);
+    //box-shadow: 0 9px 30px -4px rgba(158, 71, 25, 0.70);
   }
   &:active {
-    box-shadow: 0 7px 8px -5px rgba(158, 71, 25, 0.4);
+    //box-shadow: 0 7px 8px -5px rgba(158, 71, 25, 0.4);
   }
 }
-//button brown
+//button green
 
 .btn_red {
   border: 1px solid #a40606;

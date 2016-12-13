@@ -1,0 +1,221 @@
+.contFluid {
+
+  .cf_signup {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    height: 100vh;
+    .container {
+      max-width: 980px;
+      margin: 50px auto 0;
+      padding: 0 10px;
+    }
+    //container
+
+    .icon-roocean {
+      font-size: 75px;
+      color: #FFFFFF;
+      text-align: center;
+      margin: 0 auto 20px;
+      display: block;
+    }
+    //icon-roocean
+
+    .sg_text {
+      position: relative;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 23px;
+      color: #FFFFFF;
+      max-width: 400px;
+      text-align: center;
+      margin: 0 auto 90px;
+    }
+    //sg_text
+
+    .sg_auth {
+      position: relative;
+      border-radius: 10px;
+      max-height: 600px;
+      overflow: hidden;
+      @include clearfix;
+      .at_left {
+        width: 44%;
+        min-height: 600px;
+        padding: 20px;
+        float: left;
+        background-image: -moz-linear-gradient( 45deg, rgba(36,79,225,.8) 0%, rgba(36,225,205,.8) 100%);
+        background-image: -webkit-linear-gradient( 45deg, rgba(36,79,225,.8) 0%, rgba(36,225,205,.8) 100%);
+        background-image: -ms-linear-gradient( 45deg, rgba(36,79,225,.8) 0%, rgba(36,225,205,.8) 100%);
+
+        .lt_title {
+          font-size: 24px;
+          font-weight: lighter;
+          color: #FFFFFF;
+          text-align: center;
+          margin: 35px auto 35px;
+        }
+        //lt_title
+
+        .lt_social {
+          text-align: center;
+          a {
+            position: relative;
+            font-size: 16px;
+            font-weight: 500;
+            max-width: 200px;
+            max-height: 50px;
+            width: 100%;
+            border-radius: 50px;
+            background-color: #FFFFFF;
+            text-align: left;
+            margin: 0 auto 20px;
+            padding: 16px 0;
+            display: block;
+            //box-shadow: 0 0 0 1px rgba(29, 166, 206, 0), 0 0 0 3px rgba(29, 166, 206, 0);
+            @include transition(box-shadow .3s ease);
+            &.facebook {
+              color: #3a5897;
+            }
+            &.vk {
+              color: #4d75a2;
+            }
+            &.twitter {
+              color: #55acee;
+            }
+            &.gplus {
+              color: #dc4e41;
+            }
+
+            .icon {
+              font-size: 20px;
+              line-height: 16px;
+              margin: 0 20px 0 30px;
+            }
+            &:hover {
+              box-shadow: 0 0 0 1px rgb(29, 166, 206), 0 0 0 3px rgba(255, 255, 255, .8);
+            }
+          }
+        }
+        //lt_social
+
+        .lt_infoText {
+          font-size: 12px;
+          font-weight: lighter;
+          max-width: 150px;
+          color: #FFFFFF;
+          text-align: center;
+          margin: 0 auto;
+        }
+        //lt_infoText
+      }
+      //at_left
+
+      .at_right {
+        width: 56%;
+        min-height: 600px;
+        padding: 20px 50px;
+        float: left;
+        background-color: rgba(255, 255, 255, 1);
+        .rt_title {
+          font-size: 24px;
+          font-weight: lighter;
+          color: #000000;
+          text-align: center;
+          margin: 35px auto 35px;
+        }
+        //rt_title
+
+        .formGroup {
+          position: relative;
+          margin: 0 auto 20px;
+          padding: 0 0 0 110px;
+          display: block;
+          .fm_title {
+            @include center(false, true);
+            left: 0;
+            font-size: 13px;
+            font-weight: lighter;
+            color: #000000;
+          }
+          //fm_title
+
+          .form-control {
+            max-width: 330px;
+            width: 100%;
+            height: 40px;
+            border-radius: 50px;
+            border: 1px solid #e5e5e5;
+            background-color: transparent;
+            color: #555;
+            outline: none;
+            padding: 0 15px;
+            @include transition(border-color .3s ease);
+            &:focus {
+              border-color: #244fe1;
+            }
+          }
+          //form-control
+
+          .fm_radio {
+            display: inline-block;
+            margin: 0 20px 0 0;
+            .checkbox {
+              position: relative;
+              font-size: 13px;
+              font-weight: lighter;
+              line-height: 22px;
+              color: #000000;
+              cursor: pointer;
+              &:before {
+                content: '';
+                position: relative;
+                width: 22px;
+                height: 22px;
+                border-radius: 50%;
+                box-shadow: inset 0 0 0 2px #cccccc;
+                margin: 0 5px 0 0;
+                vertical-align: top;
+                display: inline-block;
+                cursor: pointer;
+                @include transition(box-shadow .3s ease);
+              }
+            }
+            //checkbox
+
+            .radio {
+              position: absolute;
+              filter: alpha(0);
+              opacity: 0;
+              &:checked + .checkbox:before {
+                box-shadow: inset 0 0 0 6px #244fe1;
+              }
+            }
+            //radio
+          }
+          //fm_radio
+
+          .fm_example {
+            font-size: 12px;
+            font-weight: lighter;
+            color: #000000;
+            margin: 0 15px;
+          }
+          //fm_example
+        }
+        //formGroup
+
+        [class^='btn_'] {
+          margin: 10px 0 0 110px;
+        }
+      }
+      //at_right
+    }
+    //sg_auth
+  }
+  //cf_signup
+
+}
+//contFluid
+

@@ -15,6 +15,7 @@ var db = monk('localhost:27017/roocean');
 var news = require('./models/news');
 
 var index = require('./routes/index');
+var signup = require('./routes/signup');
 
 var app = express();
 
@@ -36,8 +37,8 @@ app.use(function(req,res,next){
     next();
 });
 
+app.use('/signup/', signup);
 app.use('/', index);
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

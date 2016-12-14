@@ -25,7 +25,7 @@
     .sg_text {
       position: relative;
       font-size: 18px;
-      font-weight: 300;
+      font-weight: lighter;
       line-height: 23px;
       color: #FFFFFF;
       max-width: 400px;
@@ -35,14 +35,16 @@
     //sg_text
 
     .sg_auth {
-      position: relative;
-      border-radius: 10px;
+      @include center(false, true);
+      max-width: 960px;
       max-height: 600px;
+      width: 100%;
+      border-radius: 10px;
       overflow: hidden;
       @include clearfix;
       .at_left {
         width: 44%;
-        min-height: 600px;
+        min-height: 550px;
         padding: 20px;
         float: left;
         background-image: -moz-linear-gradient( 45deg, rgba(36,79,225,.8) 0%, rgba(36,225,205,.8) 100%);
@@ -114,7 +116,7 @@
 
       .at_right {
         width: 56%;
-        min-height: 600px;
+        min-height: 550px;
         padding: 20px 50px;
         float: left;
         background-color: rgba(255, 255, 255, 1);
@@ -138,6 +140,7 @@
             font-size: 13px;
             font-weight: lighter;
             color: #000000;
+            max-width: 90px;
           }
           //fm_title
 
@@ -157,6 +160,42 @@
             }
           }
           //form-control
+
+          .fm_date {
+            position: relative;
+            @include clearfix;
+            & > div {
+              position: relative;
+              float: left;
+              select {
+                font-size: 13px;
+                font-weight: lighter;
+                width: 100%;
+                height: 40px;
+                border-radius: 50px;
+                border: 1px solid #e5e5e5;
+                background-color: transparent;
+                outline: none;
+                color: #bebebe;
+                padding: 0 15px;
+                cursor: pointer;
+              }
+            }
+            //div
+
+            .dt_day,
+            .dt_year {
+              width: 30%;
+            }
+            .dt_month {
+              width: 40%;
+              padding: 0 3px;
+              .icon {
+                right: 6px;
+              }
+            }
+          }
+          //fm_date
 
           .fm_radio {
             display: inline-block;
@@ -215,7 +254,54 @@
     //sg_auth
   }
   //cf_signup
-
 }
 //contFluid
+
+@media all and (max-width: 991px) {
+  .contFluid {
+    .cf_signup {
+      .sg_auth {
+        .at_left {
+          width: 100%;
+          min-height: 0;
+
+          .lt_title {
+            margin-top: 0;
+            margin-bottom: 20px;
+          }
+          //lt_title
+
+          .lt_social {
+            a {
+              max-width: 180px;
+              margin: 0 10px 20px;
+              display: inline-block;
+            }
+          }
+          //lt_social
+
+          .lt_infoText {
+            max-width: 100%;
+          }
+          //lt_infoText
+        }
+        //at_left
+
+        .at_right {
+          width: 100%;
+          .formGroup {
+            .form-control {
+              max-width: 100%;
+            }
+          }
+          //formGroup
+        }
+        //at_right
+      }
+      //sg_auth
+    }
+    //cf_signup
+  }
+  //contFluid
+}
 

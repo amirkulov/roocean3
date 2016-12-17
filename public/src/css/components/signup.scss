@@ -5,7 +5,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100%;
-    height: 100vh;
+    //height: 100vh;
     .container {
       max-width: 980px;
       margin: 50px auto 0;
@@ -35,12 +35,12 @@
     //sg_text
 
     .sg_auth {
-      @include center(false, true);
+      //@include center(false, true);
       max-width: 960px;
       max-height: 600px;
       width: 100%;
       border-radius: 10px;
-      overflow: hidden;
+      //overflow: hidden;
       @include clearfix;
       .at_left {
         width: 44%;
@@ -239,7 +239,8 @@
             font-size: 12px;
             font-weight: lighter;
             color: #000000;
-            margin: 0 15px;
+            margin: 10px;
+            display: block;
           }
           //fm_example
         }
@@ -290,8 +291,73 @@
         .at_right {
           width: 100%;
           .formGroup {
+            padding-left: 200px;
+            .fm_title {
+              max-width: 200px;
+            }
             .form-control {
               max-width: 100%;
+            }
+          }
+          //formGroup
+
+          [class^=btn_] {
+              margin: 40px auto;
+              display: block;
+          }
+        }
+        //at_right
+      }
+      //sg_auth
+    }
+    //cf_signup
+  }
+  //contFluid
+}
+
+
+@media all and (max-width: 860px) {
+  .contFluid {
+    .cf_signup {
+      .sg_auth {
+        .at_left {
+          .lt_social {
+            a {
+              font-size: 0;
+              width: 50px;
+              height: 50px;
+              text-align: center;
+              .icon {
+                margin: 0;
+              }
+            }
+          }
+          //lt_social
+        }
+        //at_left
+      }
+      //sg_auth
+    }
+    //cf_signup
+  }
+  //contFluid
+}
+
+@media all and (max-width: 660px) {
+  .contFluid {
+    .cf_signup {
+      .sg_auth {
+        .at_right {
+          width: 100%;
+          .formGroup {
+            padding-left: 0;
+            .fm_title {
+              max-width: 100%;
+              position: relative;
+              top: 0;
+              transform: translate(0);
+              display: block;
+              margin: 0 0 15px;
             }
           }
           //formGroup
@@ -305,3 +371,30 @@
   //contFluid
 }
 
+@media all and (max-width: 480px) {
+  .contFluid {
+    .cf_signup {
+      .sg_auth {
+        .at_right {
+          padding: 20px;
+          .formGroup {
+            padding-left: 0;
+            .fm_title {
+              max-width: 100%;
+              position: relative;
+              top: 0;
+              transform: translate(0);
+              display: block;
+              margin: 0 0 15px;
+            }
+          }
+          //formGroup
+        }
+        //at_right
+      }
+      //sg_auth
+    }
+    //cf_signup
+  }
+  //contFluid
+}

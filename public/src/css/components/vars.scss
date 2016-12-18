@@ -223,7 +223,7 @@
 }
 
 .btn_green,
-.btn_red {
+.btn_white {
   @include roboto;
   font-size: 16px;
   font-weight: 500;
@@ -263,6 +263,24 @@
   }
 }
 //button green
+
+.btn_white {
+  background-color: rgba(255,255,255,.15);
+  border: 1px solid #FFFFFF;
+  color: #ffffff;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: rgba(255,255,255,.3);
+    border-color: #fff;
+    text-decoration: none;
+    //box-shadow: 0 9px 30px -4px rgba(158, 71, 25, 0.70);
+  }
+  &:active {
+    //box-shadow: 0 7px 8px -5px rgba(158, 71, 25, 0.4);
+  }
+}
+//button white
 
 .btn_red {
   border: 1px solid #a40606;

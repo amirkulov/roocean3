@@ -5,10 +5,17 @@ html
         meta(name="viewport" content="width=device-width, initial-scale=1")
         link(href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet")
         link(rel='stylesheet', href='/stylesheets/main.css')
+        script(src="http://maps.googleapis.com/maps/api/js?libraries=places")
         script(src="/javascripts/jquery.js")
         script(src="/javascripts/main.js")
     body
         div.contFluid
+            div.cf_auth
+                div.ah_panel
+                    div.pl_use Уже используете Roocean?
+                    div.btn_white Войти
+            //cf_auth
+
             div.cf_signup(style="background-image: url(/images/bg.jpg);")
                 div.container
                     div.icon.icon-roocean
@@ -124,10 +131,15 @@ html
                                                 option 1991
                                                 option 1990
 
-                                label.formGroup
+                                label.formGroup.fg_search
                                     div.fm_title Город
-                                    input.form-control(type="text" name="city" placeholder="Укажите местоположение")
+                                    input#geocomplete.form-control(type="text" name="city" value="" placeholder="Укажите местоположение" autocomplete="off")
+                                    div.icon.icon-search
                                     span.fm_example например: Москва, Россия
+                                    input(name="lat" type="hidden" value="")
+                                    input(name="lng" type="hidden" value="")
+                                    input(name="formatted_address" type="hidden" value="")
+                                    input(name="country" type="hidden" value="")
                                 div.formGroup
                                     div.fm_title Пол
                                     div.fm_radio

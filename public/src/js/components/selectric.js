@@ -1042,7 +1042,7 @@
    */
   $.fn[pluginName].defaults = {
     onChange             : function(elm) { $(elm).change(); },
-    maxHeight            : 300,
+    maxHeight            : 223,
     keySearchTimeout     : 500,
     arrowButtonMarkup    : '<span class="icon icon-sort"></span>',
     disableOnMobile      : false,

@@ -6,8 +6,8 @@ var UsersSchema = new Schema({
     username: String,
     email: String,
     password: String,
-    name: String,
-    age: String
+    avatar: String,
+    type: Number
 });
 
 var UsersModel = mongoose.model('Users', UsersSchema);

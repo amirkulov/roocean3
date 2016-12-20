@@ -265,9 +265,13 @@
 //button green
 
 .btn_white {
-  background-color: rgba(255,255,255,.15);
+  font-size: 14px;
+  height: 35px;
+  line-height: 34px;
   border: 1px solid #FFFFFF;
+  background-color: rgba(255,255,255,.15);
   color: #ffffff;
+  padding: 0 25px;
   &:hover,
   &:focus,
   &:active {

@@ -22,6 +22,9 @@ var dateHelper = require('../helpers/date');
 
 var vedomosti = "http://www.vedomosti.ru/rss/news.xml";
 
+var arSource = {"vedomosti":"http://www.vedomosti.ru/rss/news.xml"};
+
+
 var arNews = [];
 
 var req = request(vedomosti),
@@ -35,14 +38,22 @@ req.on('response', function (res) {
     stream.pipe(feedparser);
 });
 
+
+
+
+
+
 feedparser.on('readable', function() {
     // This is where the action is!
-    var stream = this,
-        meta = this.meta,
-        item;
+    var stream = this;
+    var meta = this.meta;
+    var item;
+    var link;
 
     while (item = stream.read()) {
+        link = item.link;
         arNews={
+            //"users" : -----------------------------,
             "title" : item.title,
             "description" : item.description,
             "categories" : item.categories,
